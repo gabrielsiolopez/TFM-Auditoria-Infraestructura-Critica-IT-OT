@@ -19,7 +19,7 @@ Este proyecto simula un escenario real de compromiso a un operador crítico aero
 El objetivo fue ejecutar una **Cyber Kill Chain** completa y diseñar posteriormente el plan de defensa y adecuación normativa (Ley PIC / ENS).
 
 ## 🛠️ Tecnologías y Herramientas Utilizadas
-* **Ofensiva:** Kali Linux, Metasploit, Burp Suite, Nmap, Mimikatz, Chisel, John the Ripper.
+* **Ofensiva:** Kali Linux, Metasploit, Nmap, Mimikatz, Chisel, John the Ripper.
 * **Infraestructura:** Docker, Windows Server (2008/2012/2016), Ubuntu Server, pfSense.
 * **OT/Industrial:** ModbusPAL (Simulación PLC), Protocolo Modbus/TCP.
 * **Normativa:** MAGERIT v3, Esquema Nacional de Seguridad (ENS), Ley PIC.
